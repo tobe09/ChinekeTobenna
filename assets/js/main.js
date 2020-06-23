@@ -255,7 +255,10 @@
 
 	}
 	
-	//send email
+	registerEmailSending();
+})(jQuery);
+
+function registerEmailSending(){
 	$('#sendMessage').on('click',() => {
 		$('#sendMessage').prop('disabled', true);
 
@@ -281,5 +284,5 @@
 			$('#sendMessage').prop('disabled', false);
 			alert("An error occured while sending email");
 		});   
-	});
-})(jQuery);
+	});	
+}
